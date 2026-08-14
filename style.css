@@ -136,3 +136,243 @@ footer {
         margin-left: 8px;
     }
 }
+/* Tablet Responsive Design */
+@media (min-width: 601px) and (max-width: 900px) {
+
+    nav {
+        padding: 15px 30px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+        padding: 50px 30px;
+    }
+
+    .hero img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    section {
+        padding: 50px 30px;
+    }
+}
+
+
+/* Desktop Responsive Design */
+@media (min-width: 901px) {
+
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        padding: 80px 60px;
+    }
+
+    .hero img {
+        width: 220px;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 25px;
+    }
+
+    section {
+        padding: 70px 80px;
+    }
+}
+
+
+/* Prevent horizontal scrolling */
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* Make images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Make buttons and links easier to use on small screens */
+@media (max-width: 600px) {
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 40px 20px;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+
+    button,
+    .btn,
+    a {
+        max-width: 100%;
+    }
+}
+/* Skills Grid */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.skills span {
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+    background: #111827;
+    color: #ffffff;
+    border: 2px solid #2563eb;
+    transition: all 0.3s ease;
+}
+
+.skills span:hover {
+    background: #2563eb;
+    color: #ffffff;
+    transform: translateY(-4px);
+}
+
+/* Skills on mobile */
+@media (max-width: 600px) {
+    .skills {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .skills span {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+}
+/* Navigation using Flexbox */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    transform: translateY(-2px);
+}
+/* Module 2 - Typography and Visual Improvements */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    letter-spacing: 0.5px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+}
+
+/* Improve links */
+a {
+    transition: all 0.3s ease;
+}
+
+/* Button styling */
+button,
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+/* Professional Navigation Styling */
+
+nav {
+    padding: 15px 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-links a {
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+    transform: translateY(-2px);
+}
+
+/* Smooth hover effect for skill boxes */
+.skills span {
+    transition: all 0.3s ease;
+}
+
+.skills span:hover {
+    transform: translateY(-4px);
+}
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
