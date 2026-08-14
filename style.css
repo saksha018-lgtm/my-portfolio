@@ -1,53 +1,113 @@
+/* =================================
+   GENERAL STYLES
+================================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background: #f5f7fa;
-    color: #222;
+html {
+    scroll-behavior: smooth;
 }
 
-/* Header */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #222222;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* =================================
+   NAVIGATION BAR
+================================= */
 
 header {
-    background: #111827;
-    padding: 20px 8%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav {
+    max-width: 1100px;
+    margin: auto;
+    padding: 15px 20px;
+
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 nav h2 {
-    color: white;
+    font-size: 24px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .nav-links a {
-    color: white;
     text-decoration: none;
-    margin-left: 20px;
+    color: #222222;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #60a5fa;
+    color: #0077cc;
 }
 
-/* Home */
+
+/* =================================
+   BUTTONS
+================================= */
+
+button {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.theme-button {
+    padding: 10px 15px;
+    border-radius: 6px;
+    background-color: #222222;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.theme-button:hover {
+    opacity: 0.85;
+}
+
+.menu-button {
+    display: none;
+    font-size: 25px;
+    background: transparent;
+}
+
+
+/* =================================
+   HERO / HOME
+================================= */
 
 .hero {
-    min-height: 450px;
+    min-height: 90vh;
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 20px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
-    padding: 60px 8%;
-    background: white;
+    gap: 60px;
 }
 
 .hero img {
@@ -55,324 +115,263 @@ nav h2 {
     height: 220px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid #111827;
+    border: 5px solid #0077cc;
 }
 
 .hero h1 {
-    font-size: 40px;
+    font-size: 42px;
     margin-bottom: 10px;
 }
 
 .hero h2 {
-    color: #2563eb;
+    color: #0077cc;
     margin-bottom: 15px;
 }
 
-/* Sections */
+.hero p {
+    max-width: 600px;
+    font-size: 18px;
+}
+
+
+/* =================================
+   SECTIONS
+================================= */
 
 section {
-    padding: 60px 8%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 80px 20px;
 }
 
 section h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 32px;
 }
 
-/* Skills */
+#about p {
+    max-width: 750px;
+    margin: auto;
+    text-align: center;
+}
+
+
+/* =================================
+   SKILLS
+================================= */
 
 .skills {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 15px;
 }
 
 .skills span {
-    background: #111827;
-    color: white;
     padding: 12px 20px;
-    border-radius: 5px;
+    background-color: #0077cc;
+    color: white;
+    border-radius: 25px;
+    font-weight: bold;
 }
 
-/* Contact */
 
-#contact {
-    background: white;
+/* =================================
+   CONTACT FORM
+================================= */
+
+#contact-form {
+    max-width: 600px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-#contact a {
-    color: #2563eb;
-    text-decoration: none;
+#contact-form label {
+    font-weight: bold;
 }
 
-/* Footer */
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+#contact-form textarea {
+    resize: vertical;
+}
+
+#contact-form button {
+    padding: 12px;
+    background-color: #0077cc;
+    color: white;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#contact-form button:hover {
+    opacity: 0.85;
+}
+
+
+/* =================================
+   FORM MESSAGES
+================================= */
+
+.error-message {
+    color: #d00000;
+    font-weight: bold;
+    text-align: center;
+}
+
+.success-message {
+    color: #008000;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* =================================
+   SCROLL ANIMATION
+================================= */
+
+section.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =================================
+   FOOTER
+================================= */
 
 footer {
-    background: #111827;
-    color: white;
     text-align: center;
-    padding: 20px;
+    padding: 25px;
+    background-color: #222222;
+    color: white;
 }
 
-/* Mobile */
 
-@media (max-width: 600px) {
+/* =================================
+   DARK MODE
+================================= */
 
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero h1 {
-        font-size: 30px;
-    }
-
-    .nav-links a {
-        margin-left: 8px;
-    }
+body.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
 }
-/* Tablet Responsive Design */
-@media (min-width: 601px) and (max-width: 900px) {
+
+body.dark-mode header {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode nav h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .nav-links a {
+    color: #ffffff;
+}
+
+body.dark-mode .nav-links a:hover {
+    color: #66b3ff;
+}
+
+body.dark-mode .theme-button {
+    background-color: #ffffff;
+    color: #222222;
+}
+
+body.dark-mode .hero h2 {
+    color: #66b3ff;
+}
+
+body.dark-mode #contact-form input,
+body.dark-mode #contact-form textarea {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border-color: #555555;
+}
+
+
+/* =================================
+   MOBILE RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 768px) {
 
     nav {
-        padding: 15px 30px;
+        position: relative;
+    }
+
+    .menu-button {
+        display: block;
     }
 
     .nav-links {
+        display: none;
+
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+
+        padding: 20px;
+
+        background-color: #ffffff;
+
+        flex-direction: column;
+        align-items: center;
+
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
+    }
+
+    body.dark-mode .nav-links {
+        background-color: #1e1e1e;
     }
 
     .hero {
-        display: flex;
         flex-direction: column;
         text-align: center;
-        gap: 25px;
-        padding: 50px 30px;
+        padding-top: 60px;
     }
 
     .hero img {
         width: 180px;
         height: 180px;
-        object-fit: cover;
     }
 
     .hero h1 {
-        font-size: 38px;
+        font-size: 32px;
     }
 
     .hero h2 {
-        font-size: 24px;
+        font-size: 22px;
+    }
+
+    .hero p {
+        font-size: 16px;
     }
 
     section {
-        padding: 50px 30px;
+        padding: 60px 20px;
     }
-}
-
-
-/* Desktop Responsive Design */
-@media (min-width: 901px) {
-
-    .hero {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 50px;
-        padding: 80px 60px;
-    }
-
-    .hero img {
-        width: 220px;
-        height: 220px;
-        object-fit: cover;
-    }
-
-    .nav-links {
-        display: flex;
-        gap: 25px;
-    }
-
-    section {
-        padding: 70px 80px;
-    }
-}
-
-
-/* Prevent horizontal scrolling */
-html,
-body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-
-/* Make images responsive */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-
-/* Make buttons and links easier to use on small screens */
-@media (max-width: 600px) {
-
-    .nav-links {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .hero {
-        padding: 40px 20px;
-    }
-
-    section {
-        padding: 40px 20px;
-    }
-
-    button,
-    .btn,
-    a {
-        max-width: 100%;
-    }
-}
-/* Skills Grid */
-.skills {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.skills span {
-    padding: 15px;
-    text-align: center;
-    border-radius: 10px;
-    font-weight: bold;
-    background: #111827;
-    color: #ffffff;
-    border: 2px solid #2563eb;
-    transition: all 0.3s ease;
-}
-
-.skills span:hover {
-    background: #2563eb;
-    color: #ffffff;
-    transform: translateY(-4px);
-}
-
-/* Skills on mobile */
-@media (max-width: 600px) {
-    .skills {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
-
-    .skills span {
-        padding: 12px 8px;
-        font-size: 14px;
-    }
-}
-/* Navigation using Flexbox */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.nav-links a {
-    text-decoration: none;
-    padding: 8px 12px;
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    transform: translateY(-2px);
-}
-/* Module 2 - Typography and Visual Improvements */
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
-
-h1,
-h2,
-h3 {
-    letter-spacing: 0.5px;
-}
-
-section h2 {
-    margin-bottom: 20px;
-}
-
-/* Improve links */
-a {
-    transition: all 0.3s ease;
-}
-
-/* Button styling */
-button,
-.btn {
-    display: inline-block;
-    padding: 10px 18px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-button:hover,
-.btn:hover {
-    transform: translateY(-2px);
-    opacity: 0.9;
-}
-/* Professional Navigation Styling */
-
-nav {
-    padding: 15px 30px;
-    border-bottom: 1px solid #ddd;
-}
-
-.nav-links a {
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.nav-links a:hover {
-    opacity: 0.7;
-    transform: translateY(-2px);
-}
-
-/* Smooth hover effect for skill boxes */
-.skills span {
-    transition: all 0.3s ease;
-}
-
-.skills span:hover {
-    transform: translateY(-4px);
-}
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
 }

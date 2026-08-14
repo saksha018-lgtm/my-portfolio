@@ -4,43 +4,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+
+    <title>Saksha R | Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
+    <!-- =========================
+         NAVIGATION BAR
+    ========================== -->
+
     <header>
         <nav>
+
             <h2>My Portfolio</h2>
 
-            <div class="nav-links">
+            <!-- Mobile Menu Button -->
+            <button id="menu-button" class="menu-button">
+                ☰
+            </button>
+
+            <!-- Navigation Links -->
+            <div id="nav-links" class="nav-links">
+
                 <a href="#home">Home</a>
+
                 <a href="#about">About</a>
+
                 <a href="#skills">Skills</a>
+
                 <a href="#contact">Contact</a>
+
+                <!-- Dark/Light Mode Button -->
+                <button id="theme-button" class="theme-button">
+                    🌙 Dark Mode
+                </button>
+
             </div>
+
         </nav>
     </header>
 
-    <!-- Home -->
+
+    <!-- =========================
+         HOME SECTION
+    ========================== -->
+
     <section id="home" class="hero">
-        <img src="profile.jpg" alt="My Profile Photo">
+
+        <img src="profile.jpg" alt="Saksha R">
 
         <div>
+
             <h1>Hello, I'm SAKSHA R</h1>
+
             <h2>Web Development Intern</h2>
 
             <p>
                 I am a college student interested in web development.
                 I enjoy learning new technologies and building simple websites.
             </p>
+
         </div>
+
     </section>
 
-    <!-- About -->
+
+    <!-- =========================
+         ABOUT SECTION
+    ========================== -->
+
     <section id="about">
+
         <h2>About Me</h2>
 
         <p>
@@ -48,25 +85,108 @@
             I enjoy building websites and improving my programming skills.
             I am eager to learn new technologies and gain practical experience.
         </p>
+
     </section>
 
-    <!-- Skills -->
+
+    <!-- =========================
+         SKILLS SECTION
+    ========================== -->
+
     <section id="skills">
+
         <h2>My Skills</h2>
 
         <div class="skills">
+
             <span>HTML</span>
+
             <span>CSS</span>
+
             <span>JavaScript</span>
+
             <span>Python</span>
+
             <span>MS Excel</span>
+
             <span>PowerPoint</span>
+
         </div>
+
     </section>
 
-    <!-- Contact -->
+
+    <!-- =========================
+         CONTACT SECTION
+    ========================== -->
+
     <section id="contact">
+
         <h2>Contact Me</h2>
+
+        <p>
+            You can contact me using the form below.
+        </p>
+
+
+        <!-- Contact Form -->
+
+        <form id="contact-form">
+
+            <!-- Name -->
+
+            <label for="name">
+                Name
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+            >
+
+
+            <!-- Email -->
+
+            <label for="email">
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+            >
+
+
+            <!-- Message -->
+
+            <label for="message">
+                Message
+            </label>
+
+            <textarea
+                id="message"
+                rows="5"
+                placeholder="Enter your message"
+            ></textarea>
+
+
+            <!-- Submit -->
+
+            <button type="submit">
+                Send Message
+            </button>
+
+
+            <!-- JavaScript validation message -->
+
+            <p id="form-message"></p>
+
+        </form>
+
+
+        <!-- Existing Contact Links -->
 
         <p>
             Email:
@@ -77,23 +197,44 @@
 
         <p>
             LinkedIn:
-            <a href="https://www.linkedin.com/" target="_blank">
+            <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+            >
                 My LinkedIn Profile
             </a>
         </p>
 
         <p>
             GitHub:
-            <a href="https://github.com/" target="_blank">
+            <a
+                href="https://github.com/"
+                target="_blank"
+            >
                 My GitHub Profile
             </a>
         </p>
+
     </section>
 
-    <!-- Footer -->
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
     <footer>
-        <p>© 2026 Your Name. All Rights Reserved.</p>
+
+        <p>
+            © 2026 Saksha R. All Rights Reserved.
+        </p>
+
     </footer>
 
+
+    <!-- JavaScript File -->
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
